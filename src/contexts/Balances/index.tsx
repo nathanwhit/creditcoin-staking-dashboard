@@ -140,9 +140,9 @@ export const BalancesProvider = ({
               free,
               reserved: new BigNumber(accountData.reserved.toString()),
               frozen: new BigNumber(
-                network.name === 'westend' // this can be removed once system.account is upgraded on Polkadot and Kusama
-                  ? accountData.frozen.toString()
-                  : accountData.miscFrozen.toString()
+                // network.name === 'westend' // this can be removed once system.account is upgraded on Polkadot and Kusama
+                // ? accountData.frozen.toString()
+                accountData.miscFrozen.toString()
               ),
             },
             locks: locks.toHuman().map((l: AnyApi) => ({
